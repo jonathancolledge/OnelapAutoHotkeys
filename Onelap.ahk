@@ -39,7 +39,7 @@ a - go straight Ahead. l,r, and a only work when a junction choice flashes up on
 */
 
 #+o:: ; win shift o
-Run, Onelap ;  For Windows store apps this won't actually work as store apps need a URI.
+Run, C:\Onelap\Onelap\OnelapLauncher.exe ;  For Windows store apps this won't actually work as store apps need a URI.
 Return
 
 ^o::
@@ -72,7 +72,7 @@ CoordMode, Mouse, Screen
 x := 1766
 y := 54
 Click %x% %Y%
-MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To increase interval power
@@ -83,7 +83,7 @@ CoordMode, Mouse, Screen
 x := 366
 y := 205
 Click %x% %Y%
-MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To decrease interval power
@@ -94,7 +94,7 @@ CoordMode, Mouse, Screen
 x := 201
 y := 205
 Click %x% %Y%
-MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To turn around
@@ -106,7 +106,7 @@ CoordMode, Mouse, Screen
 x := 1766
 y := 54
 Click %x% %Y%
-MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To click yes to a dialogue box
@@ -117,7 +117,7 @@ CoordMode, Mouse, Screen
 x := 790
 y := 646
 Click %x% %Y%
-MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To click no to a dialogue box
@@ -128,7 +128,7 @@ CoordMode, Mouse, Screen
 x := 1110
 y := 646
 Click %x% %Y%
-MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To click the menu box
@@ -139,7 +139,7 @@ CoordMode, Mouse, Screen
 x := 1874
 y := 52
 Click %x% %Y%
-; MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+; MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To click the power tab in the menu box
@@ -150,7 +150,7 @@ CoordMode, Mouse, Screen
 x := 315
 y := 315
 Click %x% %Y%
-; MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+; MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To see your power averages e.g. when you are targetting best 20 minute power, it is nice to see the average power every now and then. This'll show it to you, then close after 10 seconds.
@@ -175,7 +175,7 @@ CoordMode, Mouse, Screen
 x := 1745
 y := 188
 Click %x% %Y%
-; MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To end ride from the menu box
@@ -186,7 +186,7 @@ CoordMode, Mouse, Screen
 x := 270
 y := 831
 Click %x% %Y%
-; MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+; MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To exit the menu box
@@ -197,7 +197,7 @@ CoordMode, Mouse, Screen
 x := 1745
 y := 188
 Click %x% %Y%
-MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To end ride all the way from game
@@ -232,7 +232,7 @@ CoordMode, Mouse, Screen
 x := 80
 y := 680
 Click %x% %Y%
-MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To turn right
@@ -243,19 +243,18 @@ CoordMode, Mouse, Screen
 x := 346
 y := 680
 Click %x% %Y%
-MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 ; To go straight Ahead
 a::
-Sleep,5000
 ;MouseClick, left, 213, 680
 ;Click, Screen, 213, 680
 CoordMode, Mouse, Screen
 x := 213
 y := 680
 Click %x% %Y%
-MouseMove, 1920, 0 ; I hope this will move the mouse to the top right of the screen and therefore out of view
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
 Return
 
 h::
