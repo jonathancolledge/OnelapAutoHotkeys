@@ -21,6 +21,7 @@ Win Shift o together - launches Onelap
 Control o - bring focus back to the Onelap window
 Control shift o together - minimises OBS
 s - skips an interval
+st - skip interval if turn around icon is absent
 i - increases interval power
 d - decreases interval power
 t - turn around
@@ -28,13 +29,13 @@ y - agree to a rpompt (y for yes)
 n - cancel or disagree with a prompt (n for No)
 m - bring up the menu
 p - click the power tab in the menu to see your stats (will only work if you have pressed m beforehand
-Shift and p together - will go straight to the power stats and then close after 10 seconds
+Control and p together - will go straight to the power stats and then close after 10 seconds
 e - ends the ride, but only if you have pressed m for menu beforehand. You will need to accept the next dialogue box by pressing y (or n if you decide not to quit)
-Shift and e together - ends the ride by automatically clicking the menu, pausing, clicking end ride, pausing again, and then clicking yes on the dialogue box. There are no second chances - this will quit the ride
+Control and e together - ends the ride by automatically clicking the menu, pausing, clicking end ride, pausing again, and then clicking yes on the dialogue box. There are no second chances - this will quit the ride
 x - exits the menu box
-l - turn left
-r - turn right
-a - go straight Ahead. l,r, and a only work when a junction choice flashes up on the left.
+Control and l - turn left
+Control and r - turn right
+Control and a - go straight Ahead. l,r, and a only work when a junction choice flashes up on the left.
 
 */
 
@@ -66,6 +67,17 @@ But instead I will just assume that the icons are always in the same place as I 
 
 s::
 ; This is to skip an interval. I don't really know what the semicolon before the MouseClick is for. If anyone knows, please let me know.
+;MouseClick, left, 1705, 54
+;Click, Screen, 1705, 54
+CoordMode, Mouse, Screen
+x := 1705
+y := 54
+Click %x% %Y%
+MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and therefore out of view
+Return
+
+^s::
+; This is to skip an interval when the turn around button is absent. I don't really know what the semicolon before the MouseClick is for. If anyone knows, please let me know.
 ;MouseClick, left, 1766, 54
 ;Click, Screen, 1766, 54
 CoordMode, Mouse, Screen
@@ -98,7 +110,7 @@ MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and
 Return
 
 ; To turn around
-; This is the same location as skip interval
+; This is the same location as skip interval sometimes
 t::
 ;MouseClick, left, 1766, 54
 ;Click, Screen, 1766, 54
@@ -154,7 +166,7 @@ Click %x% %Y%
 Return
 
 ; To see your power averages e.g. when you are targetting best 20 minute power, it is nice to see the average power every now and then. This'll show it to you, then close after 10 seconds.
-+p:: ; shift p
+^p:: ; shift p
 ;MouseClick, left, 1874, 52
 ;Click, Screen, 1874, 52
 CoordMode, Mouse, Screen
@@ -201,7 +213,7 @@ MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and
 Return
 
 ; To end ride all the way from game
-+e:: ; this is shift and e (that's what the +e stands for) and that will execute the clicks below, with a 1 second (1000 ms) pause between each click. There is no confirmation to quit - it does it all.
+^e:: ; this is control and e (that's what the ^e stands for) and that will execute the clicks below, with a 1 second (1000 ms) pause between each click. There is no confirmation to quit - it does it all.
 ;MouseClick, left, 1874, 52
 ;Click, Screen, 1874, 52
 CoordMode, Mouse, Screen
@@ -225,7 +237,7 @@ Click %x% %Y%
 Return
 
 ; To turn left
-l::
+^l::
 ;MouseClick, left, 80, 680
 ;Click, Screen, 80, 680
 CoordMode, Mouse, Screen
@@ -236,7 +248,7 @@ MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and
 Return
 
 ; To turn right
-r::
+^r::
 ;MouseClick, left, 346, 680
 ;Click, Screen, 346, 680
 CoordMode, Mouse, Screen
@@ -247,7 +259,7 @@ MouseMove, 1920, 0 ; This will move the mouse to the top right of the screen and
 Return
 
 ; To go straight Ahead
-a::
+^a::
 ;MouseClick, left, 213, 680
 ;Click, Screen, 213, 680
 CoordMode, Mouse, Screen
