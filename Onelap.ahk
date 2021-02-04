@@ -1,3 +1,8 @@
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; #Warn  ; Enable warnings to assist with detecting common errors.
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+
 ; The autohotkey script ends with a .ahk extension. In it you would have instructions such as those below
 ; Win+r shell:startup opens the startup folder. Add the autohotkey script here or create a script to start other scripts and put that in the startup folder
 
